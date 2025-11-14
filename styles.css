@@ -1,0 +1,375 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+}
+
+.medical-landing {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.navbar {
+    background-color: #23283d;
+    padding: 15px 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: white;
+    font-size: 24px;
+    font-weight: 500;
+}
+
+.nav-links {
+    display: flex;
+    gap: 40px;
+    margin-left: auto;
+    padding-right: 40px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    transition: opacity 0.3s;
+}
+
+.nav-links a:hover {
+    opacity: 0.8;
+}
+
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.search-box {
+    background-color: #d4d4d4;
+    border-radius: 25px;
+    padding: 8px 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    min-width: 200px;
+}
+
+.search-box input {
+    border: none;
+    background: transparent;
+    outline: none;
+    flex: 1;
+    font-size: 14px;
+}
+
+.search-btn {
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    padding: 0;
+    display: flex;
+    align-items: center;
+}
+
+.user-icon {
+    background-color: #d4d4d4;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.hero {
+    flex: 1;
+    background-image: url("stet.jpg");
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    padding: 80px 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    filter: grayscale(100%);
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0.3);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+    margin-bottom: auto;
+}
+
+.hero-title {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.1;
+}
+
+.title-medical {
+    font-size: 70px;
+    font-weight: 400;
+    letter-spacing: 2px;
+}
+
+.title-professional {
+    font-size: 70px;
+    font-weight: bold;
+}
+
+.doctor-card {
+    position: relative;
+    z-index: 1;
+    background-color: #181e32;
+    border-radius: 30px;
+    padding: 50px 40px;
+    max-width: 450px;
+    color: white;
+    filter: none;
+    opacity: 80%;
+    background: linear-gradient(90deg, #23283d, #8b778d);
+}
+
+.doctor-name {
+    font-size: 56px;
+    font-weight: 300;
+    line-height: 1.2;
+    margin-bottom: 20px;
+    color: #b8c5d6;
+}
+
+.doctor-title {
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 25px;
+}
+
+.doctor-description {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 35px;
+    color: #d4d4d4;
+}
+
+.consult-btn {
+    background-color: #a8d5d5;
+    color: #2d3142;
+    border: none;
+    padding: 15px 40px;
+    border-radius: 30px;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.3s;
+}
+
+.consult-btn:hover {
+    background-color: #95c5c5;
+}
+
+.footer {
+    display: flex;
+    align-items: center;
+    height: 60px;
+}
+
+.footer-number {
+    background-color: #000;
+    color: #c8ff00;
+    font-size: 32px;
+    font-weight: 700;
+    padding: 0 40px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.footer-info {
+    background-color: #c8ff00;
+    flex: 1;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    gap: 60px;
+    padding: 0 40px;
+    font-weight: 600;
+}
+
+.footer-caption {
+    background-color: #c8ff00;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 0 40px;
+    font-weight: 600;
+}
+
+/* ------------------------------- */
+/*         TABLET / SMALL LAPTOP   */
+/* ------------------------------- */
+@media (max-width: 992px) {
+
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        padding: 60px 20px;
+    }
+
+    .doctor-card {
+        margin-top: 40px;
+        max-width: 80%;
+        padding: 40px 30px;
+    }
+}
+
+
+/* ------------------------------- */
+/*             MOBILE              */
+/* ------------------------------- */
+@media (max-width: 768px) {
+
+    /* NAVBAR FIX */
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+        padding: 15px 20px;
+    }
+
+    .nav-links {
+        order: 3;
+        padding-right: 0;
+        gap: 20px;
+        flex-wrap: wrap;
+        margin-left: 0;
+    }
+
+    .nav-right {
+        order: 2;
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .search-box {
+        min-width: 120px;
+        padding: 6px 12px;
+    }
+
+    /* HERO TEXT */
+    .hero {
+        padding: 40px 20px;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .title-medical,
+    .title-professional {
+        font-size: 40px;
+    }
+
+    .hero-content {
+        text-align: center;
+    }
+
+    /* DOCTOR CARD GOES BELOW */
+    .doctor-card {
+        position: relative;
+        right: 0;
+        max-width: 100%;
+        padding: 30px 20px;
+        margin-top: 20px;
+    }
+
+    .doctor-name {
+        font-size: 36px;
+    }
+
+    .doctor-title {
+        font-size: 22px;
+    }
+
+    .doctor-description {
+        font-size: 14px;
+    }
+
+    .consult-btn {
+        font-size: 16px;
+        padding: 12px 20px;
+    }
+
+    /* FOOTER STACK */
+    .footer {
+        flex-direction: column;
+        height: auto;
+        text-align: center;
+    }
+
+    .footer-number,
+    .footer-info,
+    .footer-caption {
+        width: 100%;
+        justify-content: center;
+        padding: 10px 0;
+        height: auto;
+    }
+
+    .footer-info {
+        gap: 20px;
+    }
+}
+
+
+/* ------------------------------- */
+/*         VERY SMALL PHONES       */
+/* ------------------------------- */
+@media (max-width: 480px) {
+
+    .title-medical,
+    .title-professional {
+        font-size: 32px;
+    }
+
+    .hero {
+        padding: 25px 12px;
+    }
+
+    .doctor-card {
+        padding: 20px 15px;
+    }
+
+    .doctor-name {
+        font-size: 30px;
+    }
+
+    .search-box input {
+        width: 70px;
+    }
+}
+
+
+/* A WEBSITE BY SUJOY BARMAN */
